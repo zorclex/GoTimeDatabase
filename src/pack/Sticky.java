@@ -1,18 +1,20 @@
 package pack;
 import java.util.Date;
-import java.util.Timer;
+//import java.util.Timer;
 
 // java.time stupf
 // https://developer.android.com/reference/java/time/package-summary?hl=en
 
 public class Sticky {
 	
-	private Date timeDue; // (year, month, day, hour, minute) (x-1900, 0-11, 0,31, 0-23, 0-59)
+	private Date timeDue; // long Time is the number of millis since jan 1, 1970 - math on that should be easy ish.
 	private String title = "(untitled)";
-	private String description = "No description yet!";
+	private String description = "(No description yet!)";
 	public boolean isEditing;
 	public boolean isOverdue;
-//	private int routine; //idk how to run this one just yet - might be a Date, Date[], or just an int to count how often. idk.
+	public boolean isRoutine; //is or is not
+	private int routineTime; //where the timer a routine is run by is stored on
+//	private reminder[] reminders //a list of reminders so we can keep track of how many dings and of what kind
 	
 	
 	
