@@ -21,7 +21,8 @@ public class Sticky {
 	// constructors! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	Sticky(long timeDue)
 	{
-		this.timeDue = new Date(timeDue); //millis since jan 1, 1970
+		long temp = System.currentTimeMillis();
+		this.timeDue = new Date(temp); //millis since jan 1, 1970
 //		if(this.timeDue < localDate())
 //		{
 //			

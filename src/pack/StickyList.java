@@ -5,8 +5,6 @@ import java.util.ArrayList;
 public class StickyList {
 	
 	private String title = "(untitled)";
-//	private int[] color; //Idk how this one is supposed to work, or if we care right now
-	private boolean isEditing = false;
 	private ArrayList<Sticky> list;
 	
 	
@@ -27,8 +25,13 @@ public class StickyList {
 		this.list.remove(temp);
 	}
 	
-	
-	
+	public void traverse()
+	{
+		for(int i = 0; i < list.size(); i++)
+		{
+            list.get(i).displayDescription();
+        }
+	}
 	
 	
 	public String getTitle()
